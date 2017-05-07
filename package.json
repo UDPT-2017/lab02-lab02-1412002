@@ -1,0 +1,25 @@
+{
+  "name": "lab02-1412002",
+  "version": "0.0.1",
+  "description": "This is just a project of UDPT class.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UDPT-2017/lab02-lab02-1412002.git"
+  },
+  "author": "Tr. An Duong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UDPT-2017/lab02-lab02-1412002/issues"
+  },
+  "homepage": "https://github.com/UDPT-2017/lab02-lab02-1412002#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bower": "^1.8.0",
+    "express-handlebars": "^3.0.0",
+    "path": "^0.12.7"
+  }
+}
