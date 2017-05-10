@@ -20,7 +20,8 @@ app.get('/', function(req, res) {
   res.render('index', {
     title: 'iSend',
     message: 'Index page',
-    actHome:'active'
+    actHome:'active',
+    breadcrumb:'Home'
   })
 })
 
@@ -28,8 +29,8 @@ app.get('/message',function(req,res){
   res.render('message',{
     title:'Message',
     message:'Message Pages',
-    actMessage:'active'
-
+    actMessage:'active',
+    breadcrumb:'Message'
   })
 })
 
@@ -37,16 +38,26 @@ app.get('/users',function(req,res){
   res.render('users',{
     title:'Message',
     message:'Users Pages',
-    actUsers:'active'
+    actUsers:'active',
+    breadcrumb:'User'
 
   })
 })
+app.get('/users/register', function(req,res){
+  res.render('register',{
+    title:'Register',
+    message:"register page",
+    actUsers:'active',
+    breadcrumb:'User'
+  })
+})
+
 app.get('/about',function(req,res){
   res.render('about',{
     title:'Message',
     message:'About Pages',
-    actAbout:'active'
-
+    actAbout:'active',
+    breadcrumb:'About'
   })
 })
 var port = 3000;
