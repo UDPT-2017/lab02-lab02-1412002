@@ -1,6 +1,6 @@
 var indexController = {
   index: function(req, res) {
-    res.render('home/index', {
+    res.render('index', {
       title: 'iSend',
       message: 'Index page',
       actHome: 'active',

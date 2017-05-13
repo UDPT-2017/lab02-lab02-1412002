@@ -1,6 +1,6 @@
 var registerController = {
   index: function(req, res) {
-    res.render('register', {
+    res.render('users/register', {
       title: 'Register',
       message: "register page",
       actUsers: 'active',
