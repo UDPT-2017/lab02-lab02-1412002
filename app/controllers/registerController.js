@@ -8,4 +8,5 @@ var registerController = {
     })
   }
 }
+
 module.exports = registerController;
