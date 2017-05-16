@@ -212,4 +212,4 @@ var md5 = function (string) {
 
         return temp.toLowerCase();
     }
-module.exports = md5;
+module.exports.md5 = md5;

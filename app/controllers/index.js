@@ -4,5 +4,7 @@ module.exports = {
   users: require('./usersController'),
   register: require('./registerController'),
   addAccount: require('./addAccountController'),
+  login: require('./loginController'),
+  logout:require('./logoutController'),
   about: require('./aboutController')
 }
