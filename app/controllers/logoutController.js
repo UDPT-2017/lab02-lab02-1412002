@@ -1,13 +1,14 @@
 var logoutController = {
   index: function(req, res) {
-    sess = req.session;
-    sess.email = '0';
-    sess.logged = false;
+    req.session.destroy();
+    //sess = req.session;
+    //sess.user = '0';
+    //sess.user.logged = false;
     res.render('users/logout', {
       title: 'Logout Success',
       message: 'Logout Success',
-      logged: sess.logged,
-      email: sess.email,
+      logged: false,
+    //  email: sess.user.username,
     })
   }
 }

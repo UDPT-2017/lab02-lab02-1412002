@@ -1,16 +1,26 @@
 var aboutController = {
   index: function(req, res) {
-    sess=req.session,
+    sess = req.session;
 
-    res.render('about', {
-      title: 'Message',
-      message: 'About Pages',
-      actAbout: 'active',
-      breadcrumb: 'About',
-      logged:sess.logged,
-      email: sess.email,
+    if (sess.user) {
+      res.render('about', {
+        title: 'Message',
+        message: 'About Pages',
+        actAbout: 'active',
+        breadcrumb: 'About',
+        logged: true,
+        email: sess.user.username,
+      })
+    } else {
+      res.render('about', {
+        title: 'Message',
+        message: 'About Pages',
+        actAbout: 'active',
+        breadcrumb: 'About',
+        logged: false,
+      })
+    }
 
-    })
   }
 }
 
