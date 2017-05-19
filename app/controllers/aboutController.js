@@ -5,7 +5,7 @@ var aboutController = {
     if (sess.user) {
       res.render('about', {
         title: 'Message',
-        message: 'About Pages',
+        message: 'iSends helps anyone send and receive message!',
         actAbout: 'active',
         breadcrumb: 'About',
         logged: true,
@@ -14,7 +14,7 @@ var aboutController = {
     } else {
       res.render('about', {
         title: 'Message',
-        message: 'About Pages',
+        message: 'iSends helps anyone send and receive message!',
         actAbout: 'active',
         breadcrumb: 'About',
         logged: false,

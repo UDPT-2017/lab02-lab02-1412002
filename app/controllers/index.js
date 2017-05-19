@@ -6,5 +6,6 @@ module.exports = {
   addAccount: require('./addAccountController'),
   login: require('./loginController'),
   logout:require('./logoutController'),
-  about: require('./aboutController')
+  about: require('./aboutController'),
+  addFriend:require('./makeFriend'),
 }

@@ -1,6 +1,10 @@
 var db = require("../models/db");
 var friend = require('../models/message/getFriend.js');
+var findAll = require('../models/message/getAllUsers.js');
+var remove = require('../models/message/removeFriendInListOther.js');
+
 var list = [];
+var allUsers=[];
 var messageController = {
   index: function(req, res) {
       sess=req.session;
@@ -9,18 +13,34 @@ var messageController = {
       //console.log(sess.user.username);
       if (sess.user){
         friend.find(sess.user.username,function (result) {
-          console.log(result);
+          //console.log(result);
           var i;
           var j=0;
-          //console.log(result.rows.length);
-
+          list.splice(0,list.length);
           for(i=0;i<result.rows.length;i++){
-            //console.log(result.rows[i].userb);
             list[j]=result.rows[i].userb;
             j++;
-            console.log(list);
           }
         });
+        findAll.getAll(sess.user.username,function(result){
+          var i;
+          var j=0;
+          allUsers.splice(0,allUsers.length);
+          for(i=0;i<result.rows.length;i++){
+            allUsers[j]=result.rows[i].username;
+            j++;
+          }
+          console.log(allUsers);
+          console.log("////////////");
+
+          remove.del(list,allUsers,function(listUsers){
+            allUsers=listUsers;
+          });
+
+          console.log(allUsers);
+        });
+
+
         res.render('message/index', {
           title: 'Message',
           message: 'Message Pages',
@@ -29,13 +49,13 @@ var messageController = {
           logged:true,
           email: sess.user.username,
           friendList:list,
+          allUser:allUsers,
 
         })
-        list.splice(0,list.length);
       } else{
         res.render('message/index', {
           title: 'Message',
-          message: 'You are not logged!',
+          message: 'Please login or signup to continue!',
           actMessage: 'active',
           breadcrumb: 'Message',
           logged:false,

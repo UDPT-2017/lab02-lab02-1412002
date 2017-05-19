@@ -26,6 +26,7 @@ var login = {
           }
         } else {
           console.log("Signin Unsuccess!");
+          result.rows[0]='0';
           result.rows[0].logged = false;
         }
       }

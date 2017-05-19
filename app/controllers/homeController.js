@@ -4,7 +4,7 @@ var indexController = {
     if (sess.user) {
       res.render('home', {
         title: 'Home',
-        message: 'Home Pages',
+        message: 'You are logged!',
         actHome: 'active',
         breadcrumb: 'Home',
         logged: true,
@@ -13,7 +13,7 @@ var indexController = {
     } else {
       res.render('home', {
         title: 'home',
-        message: 'home Pages',
+        message: 'Please login or signup to continue!',
         actHome: 'active',
         breadcrumb: 'home',
         logged: false,

@@ -13,7 +13,7 @@ var userController = {
     } else {
       res.render('users', {
         title: 'User',
-        message: 'User Pages',
+        message: 'Please login or signup to continue!',
         actUsers: 'active',
         breadcrumb: 'User',
         logged: false,
