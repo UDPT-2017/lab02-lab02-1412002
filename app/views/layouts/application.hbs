@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{title}}</title>
-  <script type="text/javascript" src="/components/MDBootstrap/js/jquery-2.2.3.min.js"></script>
-  <script type="text/javascript" src="/components/MDBootstrap/js/tether.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 
    <!-- Bootstrap -->
-   <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
    <link rel="stylesheet" href="/components/bootstrap/dist/css/font-awesome.min.css">
    <link rel="stylesheet" href="/app/views/partials/style.css">
-   <link rel="stylesheet" href="/components/MDBootstrap/css/mdb.css">
+   <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,7 +24,10 @@
     <![endif]-->
 </head>
 
-<body>
+<body style="
+    padding-top: 20px;
+    background-color: #F7F7F7;
+">
   <div class="container-fluid">
     <!--TOP MENU-->
     {{> topmenu}}
@@ -36,8 +39,6 @@
   </div>
   {{> footer}}
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script type="text/javascript" src="/components/MDBootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/components/MDBootstrap/js/mdb.min.js"></script>
 
   </body>
 

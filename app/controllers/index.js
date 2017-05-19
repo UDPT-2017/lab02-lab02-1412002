@@ -3,5 +3,11 @@ module.exports = {
   message: require('./messageController'),
   users: require('./usersController'),
   register: require('./registerController'),
-  about: require('./aboutController')
+  addAccount: require('./addAccountController'),
+  login: require('./loginController'),
+  logout:require('./logoutController'),
+  about: require('./aboutController'),
+  addFriend:require('./makeFriend'),
+  removeFriend:require('./removeFriend'),
+
 }
