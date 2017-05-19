@@ -30,7 +30,9 @@ module.exports = function(app, sess) {
   app.post('/users/addAccount', controllers.addAccount.create);
   app.post('/users/login', controllers.login.signin);
   app.get('/users/logout', controllers.logout.index);
-app.get('/users/addFriend',controllers.addFriend.add);
+  app.get('/users/addFriend',controllers.addFriend.add);
+  app.get('/users/removeFriend',controllers.removeFriend.remove);
+
   app.get('/about', controllers.about.index);
 
   app.engine('hbs', exphbs({

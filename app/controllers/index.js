@@ -8,4 +8,6 @@ module.exports = {
   logout:require('./logoutController'),
   about: require('./aboutController'),
   addFriend:require('./makeFriend'),
+  removeFriend:require('./removeFriend'),
+
 }

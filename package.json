@@ -20,15 +20,16 @@
     "body-parser": "^1.17.1",
     "bootstrap": "^3.3.7",
     "bower": "^1.8.0",
+    "connect-flash": "*",
     "express": "^4.15.2",
     "express-handlebars": "^3.0.0",
+    "express-session": "*",
     "p": "^0.2.0",
-    "path": "^0.12.7",
-    "pg": "^6.1.5",
-    "connect-flash": "*",
     "passport": "*",
     "passport-local": "*",
-    "express-session": "*"
+    "path": "^0.12.7",
+    "pg": "^6.1.5",
+    "socket.io": "^2.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
